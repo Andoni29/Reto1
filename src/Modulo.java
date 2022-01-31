@@ -11,5 +11,13 @@ public class Modulo {
 		identificador++;
 	}
 
+	public String getNombre() {
+		return nombre;
+	}
+
+	public int getId() {
+		return id;
+	}
+
 	
 }

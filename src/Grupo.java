@@ -10,4 +10,16 @@ public class Grupo {
 		this.identificador=id;
 		this.alumnos=alumnos;
 	}
+
+	public Modulo[] getModulos() {
+		return modulos;
+	}
+
+	public String getIdentificador() {
+		return identificador;
+	}
+
+	public Alumno[] getAlumnos() {
+		return alumnos;
+	}
 }

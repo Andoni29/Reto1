@@ -12,4 +12,14 @@ public class Alumno {
 		this.numAlumno=identificador;
 		identificador++;
 	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public int getNumAlumno() {
+		return numAlumno;
+	}
+
+	
 }

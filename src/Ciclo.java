@@ -8,6 +8,14 @@ public class Ciclo {
 		this.identificador=id;
 		this.grupos=grupos;
 	}
+
+	public String getIdentificador() {
+		return identificador;
+	}
+
+	public Grupo[] getGrupos() {
+		return grupos;
+	}
 	
 	
 

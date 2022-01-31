@@ -11,4 +11,14 @@ public class Notas {
 		this.modulo=modulo;
 		this.evaluacion=eval;
 	}
+
+
+	public double getNota() {
+		return nota;
+	}
+
+
+	public int getEvaluacion() {
+		return evaluacion;
+	}
 }
