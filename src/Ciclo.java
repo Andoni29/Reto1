@@ -34,6 +34,24 @@ public class Ciclo {
 		
 	}
 	
-	
+	public void verMedia() {
+		String selecGrupo;
+		int selecAlumno;
+		for(int i=0;i<this.grupos.length;i++) {
+			System.out.println("Introduzca el nombre del grupo del que quiera ver la media");
+			System.out.println(i+". "+this.grupos[i].getIdentificador());
+		}
+		selecGrupo = Console.readString();
+		
+		for(int i=0;i<this.grupos.length;i++) {
+			if(this.grupos[i].getIdentificador().equalsIgnoreCase(selecGrupo)) {
+				this.grupos[i].getAlumnos();
+				System.out.println("Introduzca numero del alumno");
+				selecAlumno = Console.readInt();
+				this.grupos[i].verMedia(selecAlumno);
+				
+			}
+		}
+	}
 
 }
