@@ -16,8 +16,8 @@ public class Nota {
 	}
 
 
-	public String getModulo() {
-		return modulo.getNombre();
+	public Modulo getModulo() {
+		return this.modulo;
 	}
 
 
@@ -47,5 +47,9 @@ public class Nota {
 	
 	public String toString() {
 		return "nota: "+this.nota;
+	}
+	
+	public String getNombreModulo() {
+		return this.modulo.getNombre();
 	}
 }

@@ -3,12 +3,14 @@ public class prueba {
 
 	public static void main(String[] args) {
 
-		String [] modulos =  {"PROGRAMACION","BASES DE DATOS","SISTEMAS INFORMATICOS","FOL",
-				"LENGUAJE DE MARCAS","ENTORNO DE DESRROLLOS"};
+		String [] modulosInfor =  {"PROGRAMACION","BASES DE DATOS","SISTEMAS INFORMATICOS","FOL",
+				"LENGUAJE DE MARCAS","ENTORNO DE DESRROLLOS","INGLES"};
+		String [] modulosMarketing = {"FOL","MARKETING","DISEÑO","ECONOMIA","BASES DE DATOS","INGLES","DESARROLLO WEB"};
 		Ciclo curso = new Ciclo();
 		Grupo [] clases;
 		Alumno [] alumnos;
-		Nota [] notas= new Nota[modulos.length];
+		Nota [] notas= new Nota[modulosInfor.length];
+		Modulo mod;
 		char finPrograma='s';
 		int numClases,numAlumnos,evaluacion;
 
@@ -32,17 +34,21 @@ public class prueba {
 					System.out.println("nombre del alumno");
 					alumnos[j].setNombre(Console.readString());
 					System.out.println("Nota del alumno "+ (i+1));
-					for(int k=0;k<modulos.length;k++) {
-						System.out.println(modulos[k]);
+					for(int k=0;k<modulosInfor.length;k++) {
 						notas[k] = new Nota();
-						notas[k].setEvaluacion(evaluacion);
-						System.out.print("Introduce modulo: ");
-						Modulo mod = new Modulo(Console.readString());
+						if(curso.getIdentificador().equalsIgnoreCase("informatica")) {
+							 mod = new Modulo(modulosInfor[k]);
+						}else {
+							 mod = new Modulo(modulosMarketing[k]);
+						}
 						notas[k].setModulo(mod);
-						System.out.println("Introduce nota de "+notas[k].getModulo());
+						System.out.println(notas[k].getNombreModulo());
+
+						notas[k].setEvaluacion(evaluacion);
+						System.out.print("Introduce nota de "+notas[k].getNombreModulo()+": ");
 						notas[k].setNota(Console.readDouble());
 					}
-					alumnos[i].setNotas(notas);
+					alumnos[j].setNotas(notas);
 				}
 				clases[i].setAlumnos(alumnos);
 				

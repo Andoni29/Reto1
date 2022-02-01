@@ -36,4 +36,12 @@ public class Grupo {
 	public Alumno[] getAlumnos() {
 		return alumnos;
 	}
+	
+	public void verMedia(int numAlumno) {
+		for(int i=0;i<alumnos.length;i++) {
+			if(this.alumnos[i].getNumAlumno()==numAlumno) {
+				this.alumnos[i].verMediaAlumno();
+			}
+		}
+	}
 }

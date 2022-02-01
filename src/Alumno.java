@@ -47,6 +47,14 @@ public class Alumno {
 			System.out.println(this.nombre+", "+this.numAlumno+this.notas[i].toString());;
 		}
 	}
+	
+	public void verMediaAlumno() {
+		double media=0;
+		for(int i=0;i<this.notas.length;i++) {
+			media=this.notas[i].getNota()+media;
+		}
+		System.out.println(media/this.notas.length);
+	}
 
 	
 }
