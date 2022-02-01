@@ -3,11 +3,7 @@ public class RetoMain {
 
 	public static void main(String[] args) {
 		
-		Modulo fol = new Modulo("Formacion y orientacion laboral");
-		Modulo bd = new Modulo("Bases de datos");
-		Modulo prog = new Modulo("Programacion");
-		Modulo si = new Modulo("Sistemas informaticos");
-		Modulo ed = new Modulo("entornos de desarrollo");
+
 		Alumno a1 = new Alumno();
 		Notas [ ]notasAlumn = new Notas[5];
 		
@@ -19,11 +15,14 @@ public class RetoMain {
 			// notas del alumno
 			System.out.println("Notas del alumno");
 			for (int j=0;j<5;j++) {
-				System.out.print("Seleccione evaluacion: ");
+
 				notasAlumn[j]=new Notas();
-				System.out.print("Nota de fol: ");
+				System.out.print("Seleccione evaluacion: ");
 				notasAlumn[j].setEvaluacion(Console.readInt());
-				notasAlumn[j].setModulo(fol);
+				System.out.print("Introduce modulo: ");
+				Modulo mod = new Modulo(Console.readString());
+				notasAlumn[j].setModulo(mod);
+				System.out.println("Introduce nota de "+notasAlumn[j].getModulo());
 				notasAlumn[j].setNota(Console.readDouble());
 				System.out.println(notasAlumn[j].getEvaluacion()+","+notasAlumn[j].getNota()+","+notasAlumn[j].getModulo());
 			}
