@@ -61,8 +61,9 @@ public class prueba {
 			switch(seleccion) {
 			
 			case (1):
+				System.out.println("Ver notas de una asignatura");
 				
-			break;
+				break;
 			
 			case(2):
 				System.out.println("Ver media del alumno");

@@ -45,5 +45,18 @@ public class Grupo {
 		}
 	}
 	
+	public void verNotaModulo() {
+		String selecModulo;
+		
+		System.out.println("Seleccione modulo");
+		selecModulo = Console.readString();
+		for(int i=0;i<this.alumnos.length;i++) {
+			if(this.alumnos[i].getIdNota(i).equalsIgnoreCase(selecModulo)) {
+				System.out.println(this.alumnos[i].getNombre()+": "+this.alumnos[i].getNotaNum(i));
+			}
+		}
+		
+	}
+	
 	
 }

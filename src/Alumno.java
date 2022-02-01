@@ -48,6 +48,16 @@ public class Alumno {
 		}
 	}
 	
+	public Nota getNota(int id) {
+		return this.notas[id];
+	}
+	public String getIdNota(int id) {
+		return this.notas[id].getNombreModulo();
+	}
+	
+	public double getNotaNum(int id) {
+		return this.notas[id].getNota();
+	}
 	public void verMediaAlumno() {
 		double media=0;
 		for(int i=0;i<this.notas.length;i++) {
