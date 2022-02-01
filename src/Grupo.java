@@ -10,6 +10,8 @@ public class Grupo {
 		this.identificador=id;
 		this.alumnos=alumnos;
 	}
+	public Grupo() {
+	}
 
 	public void setModulos(Modulo[] modulos) {
 		this.modulos = modulos;

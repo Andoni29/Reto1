@@ -8,6 +8,10 @@ public class Ciclo {
 		this.identificador=id;
 		this.grupos=grupos;
 	}
+	
+	public Ciclo() {
+
+	}
 
 	public void setIdentificador(String identificador) {
 		this.identificador = identificador;
@@ -23,6 +27,11 @@ public class Ciclo {
 
 	public Grupo[] getGrupos() {
 		return grupos;
+	}
+
+	public void setClases(Grupo[] clases) {
+		this.grupos = clases;
+		
 	}
 	
 	

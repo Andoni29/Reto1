@@ -2,7 +2,7 @@
 public class Alumno {
 	
 	private String nombre;
-	private Notas [] notas;
+	private Nota [] notas;
 	private int numAlumno;
 	private static int identificador=1;
 	
@@ -11,11 +11,11 @@ public class Alumno {
 		identificador++;
 	}
 	
-	public void setNotas(Notas[] notas) {
+	public void setNotas(Nota[] notas) {
 		this.notas = notas;
 	}
 
-	public Alumno (String nombre, Notas [] notasAlumn) {
+	public Alumno (String nombre, Nota [] notasAlumn) {
 		this.nombre=nombre;
 		this.notas=notasAlumn;
 		this.numAlumno=identificador;

@@ -1,15 +1,15 @@
 
-public class Notas {
+public class Nota {
 
 	private double nota;
 	private Modulo modulo;
 	private int evaluacion;
 	
-	public Notas() {
+	public Nota() {
 		nota=0;
 		evaluacion=0;
 	}
-	public Notas(double nota,Modulo modulo, int eval) {
+	public Nota(double nota,Modulo modulo, int eval) {
 		this.nota=nota;
 		this.modulo=modulo;
 		this.evaluacion=eval;
