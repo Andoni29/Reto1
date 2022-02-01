@@ -19,5 +19,21 @@ public class Modulo {
 		return id;
 	}
 
+	public static int getIdentificador() {
+		return identificador;
+	}
+
+	public static void setIdentificador(int identificador) {
+		Modulo.identificador = identificador;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	
 }
