@@ -53,5 +53,36 @@ public class Ciclo {
 			}
 		}
 	}
+	
+	public void getIDGrupos() {
+		for(int i=0;i<grupos.length;i++) {
+			System.out.println(this.grupos[i].getIdentificador());
+		}
+	}
+	
+	public void imprimiAlumnos(String id) {
+		for(int i=0;i<grupos.length;i++) {
+			if(grupos[i].getIdentificador()==id) {
+				grupos[i].listaAlumnos();
+			}
+			
+		}
+	}
+	
+	public void cambiarNotasGrupo(String idGrup, int idAlum) {
+		for(int i=0;i<grupos.length;i++) {
+			if(this.grupos[i].getIdentificador()==idGrup) {
+				this.grupos[i].cambiarNotas(idAlum);
+			}
+		}
+	}
+	
+	public void verNotasAlumno(int numAlumno,String idGrup) {
+		for(int i=0;i<grupos.length;i++) {
+			if(this.grupos[i].getIdentificador()==idGrup) {
+				this.grupos[i].verNotasAlumno(numAlumno);
+			}
+		}
+	}
 
 }

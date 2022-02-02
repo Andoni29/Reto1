@@ -45,6 +45,11 @@ public class Grupo {
 		}
 	}
 	
+	public void listaAlumnos() {
+		for(int i=0;i<alumnos.length;i++) {
+			System.out.println((i+1)+". "+this.alumnos[i].getNombre()+ ", numero de clase "+this.alumnos[i].getNumAlumno());
+		}
+	}
 	public void verNotaModulo() {
 		String selecModulo;
 		
@@ -52,11 +57,26 @@ public class Grupo {
 		selecModulo = Console.readString();
 		for(int i=0;i<this.alumnos.length;i++) {
 			if(this.alumnos[i].getIdNota(i).equalsIgnoreCase(selecModulo)) {
-				System.out.println(this.alumnos[i].getNombre()+": "+this.alumnos[i].getNotaNum(i));
+				System.out.println("media de "+this.alumnos[i].getNombre()+": "+this.alumnos[i].getNotaNum(i));
 			}
 		}
 		
 	}
 	
+	public void cambiarNotas(int id){
+		for(int i=0;i<alumnos.length;i++) {
+			if(this.alumnos[i].getNumAlumno()==id) {
+				this.alumnos[i].cambiarNota();
+			}
+		}
+	}
+	
+	public void verNotasAlumno(int idAlumn) {
+		for(int i=0;i<alumnos.length;i++) {
+			if(this.alumnos[i].getNumAlumno()==idAlumn) {
+				this.alumnos[i].verNotas();
+			}
+		}
+	}
 	
 }

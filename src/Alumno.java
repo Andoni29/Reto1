@@ -65,6 +65,20 @@ public class Alumno {
 		}
 		System.out.println(media/this.notas.length);
 	}
-
+	
+	public void cambiarNota() {
+		double nuevaNota;
+		for(int i=0;i<notas.length;i++) {
+			System.out.print("introduce  nota de "+this.notas[i].getNombreModulo()+": ");
+			nuevaNota = Console.readDouble();
+			this.notas[i].setNota(nuevaNota);
+		}
+	}
+	
+	public void verNotas() {
+		for(int i=0;i<this.notas.length;i++) {
+			System.out.println(this.notas[i].getNombreModulo()+": "+this.notas[i].getNota());
+		}
+	}
 	
 }
