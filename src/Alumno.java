@@ -7,6 +7,7 @@ public class Alumno {
 	private static int identificador=1;
 	
 	public Alumno() {
+		
 		this.numAlumno=identificador;
 		identificador++;
 	}

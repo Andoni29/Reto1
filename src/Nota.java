@@ -52,4 +52,5 @@ public class Nota {
 	public String getNombreModulo() {
 		return this.modulo.getNombre();
 	}
+	
 }

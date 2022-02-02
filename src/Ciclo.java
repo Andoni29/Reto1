@@ -5,6 +5,7 @@ public class Ciclo {
 	private Grupo [] grupos;
 	
 	public Ciclo(String id, Grupo [] grupos) {
+		
 		this.identificador=id;
 		this.grupos=grupos;
 	}

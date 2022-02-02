@@ -149,7 +149,7 @@ public class prueba {
 				break;
 			
 			case(5):
-				System.out.println("FIN");
+				System.out.println("FIN del programa");
 			default:
 				System.out.println("Esa opcion no esta disponible");
 			}

@@ -6,6 +6,7 @@ public class Modulo {
 	private static int identificador=1;
 	
 	public Modulo(String nombre) {
+		
 		this.nombre=nombre;
 		this.id=identificador;
 		identificador++;
